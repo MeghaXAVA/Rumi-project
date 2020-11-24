@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/rumi" mode="merge"/>
+    <filter root="/content/rumi" mode="merge"/>
+    <filter root="/content/dam/rumi" mode="merge"/>
+    <filter root="/content/experience-fragments/rumi" mode="merge"/>
+</workspaceFilter>
