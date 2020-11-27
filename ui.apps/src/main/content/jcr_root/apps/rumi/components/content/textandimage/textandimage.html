@@ -1,0 +1,87 @@
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .component-container{
+      display:flex;
+      /* height:auto; */
+
+      padding:2.5em;
+    }
+
+    .leftAligned{
+     flex-direction:row;
+    }
+
+    .rightAligned{
+     flex-direction:row-reverse;
+    }
+    .photo-container{
+      width:50%;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:row;
+      justify-content:center;
+  
+      background-color:#e0f2f1;
+      
+      
+    }
+    .photo-container>img{
+      width:100%;
+      padding:auto;
+      margin:auto;
+      
+    }
+    .content-container{
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items:flex-start;
+      width:50%;
+      box-sizing: border-box;
+      background-color:#e0f2f1;      
+      padding:0em 2.5em;
+    
+    }
+    .content-container a{
+      margin:2.5rem 2.5rem 0em;
+      padding:1em 2em;
+      text-decoration:none;
+    }
+    .content-container .content-subtitle{
+      color:rgba(0, 0, 0, 0.623);
+      margin:0rem 2.5rem 1.5rem;
+      font-family: 'Baloo Tammudu 2', cursive;
+
+    }
+    .content-container .content-heading{
+      font-family: 'Baloo Tammudu 2', cursive;
+      line-height:1.2em;
+      margin:1rem 2.5rem 0rem;
+    }
+    .content-container .content-text p{
+      margin:1.5em 2.5em 0em;
+      color:rgba(0, 0, 0, 0.623);
+      font-family: 'Baloo Tammudu 2', cursive;
+      line-height:1.2em;
+
+    }
+  </style>
+
+<div class="component-container ${properties.imageAlignment}">
+    <div class="photo-container">
+    	<img src=${properties.fileReference}>
+    </div>
+    <div class="content-container">
+        <p class="content-subtitle">${properties.subTitle}</p>
+        <h1 class="content-heading">${properties.title}</h1>
+        <span class="content-text">${properties.description @ context="html"}</span>
+        <a href="${properties.ctaLink @ extension ='html'}"
+               target="${properties.targetWindow}"
+               style="background-color: ${properties.ctaColor @context='styleToken'} ;color:${properties.ctaTextColor @context='styleToken'}; border-radius:10em;">
+                ${properties.ctaLabel}
+        </a>
+    </div>
+</div>

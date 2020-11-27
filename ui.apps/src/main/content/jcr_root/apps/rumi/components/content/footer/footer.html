@@ -1,0 +1,53 @@
+  <style>
+    .main_container{
+      display:flex;
+      justify-content: center;
+    }
+    .component_container{
+      
+      width:100%;
+      background-color: #f5f5f4;
+      display:flex;
+      flex-direction:row;
+      justify-content: space-around;
+      margin:0em 3em;
+      padding:1em 5em 3em;
+    }
+    .component_container div{
+      display:flex;
+      flex-direction:column;
+    }
+    .component_container div h3{
+      margin:0;
+      padding:0;
+      margin:2em 0em;
+    }
+    .component_container div p{
+      margin:0.3em;
+      padding:0;
+  
+    }
+    
+  </style>
+
+ <div class="main_container">
+    <div class="component_container">
+        <sly data-sly-list.continentMultifield="${resource.getChildren}">
+            <sly data-sly-test="${continentMultifield.name == 'footer'}">
+                <sly data-sly-list.continent="${continentMultifield.getChildren}">
+                    <div>
+                        <h3>${continent.footerTitle}</h3>
+                        <sly data-sly-list.countryMultifield="${continent.getChildren}">
+
+                            <sly data-sly-test="${countryMultifield.name == 'footerItems'}"
+                                data-sly-list.country="${countryMultifield.getChildren}">
+                                <p>${country.footerLabel}</p>
+                            </sly>
+                        </sly>
+                    </div>
+
+                </sly>
+            </sly>
+        </sly>
+    </div>
+  </div>
