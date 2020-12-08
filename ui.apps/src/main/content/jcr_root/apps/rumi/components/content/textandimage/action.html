@@ -1,6 +1,5 @@
-
 <!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~ Copyright 2018 Adobe Systems Incorporated
+  ~ Copyright 2018 Adobe
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -14,7 +13,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
-<sly data-sly-template.pretitle="${@ teaser}">
-<div class="cmp-teaser__pretitle" data-sly-test.pretitle="${teaser.preTitle}">${pretitle}</div>
+<sly data-sly-template.action="${@ action}">
+    <a style="background-color: ${properties.ctaColor @context='styleToken'} ;color:${properties.ctaTextColor @context='styleToken'}; border-radius:10em;" class="cmp-teaser__action-link" href="${action.URL}">${action.title}</a>
 </sly>
-

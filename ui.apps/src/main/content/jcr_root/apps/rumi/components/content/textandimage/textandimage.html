@@ -1,41 +1,142 @@
-<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  ~ Copyright 2018 Adobe Systems Incorporated
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
-  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<link rel="stylesheet" href="https://use.fontawesome.com/f6bdc44dbc.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;600&display=swap" rel="stylesheet">
 <style>
-.cmp-teaser__content ul li{
-list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAeFBMVEX///8AgAAGgwb7/fv0+vT4/Pjv9+/5/PkNhg1fr1/U6tR9vn01mjXo9Ojd7t3D4cMlkiWJxInL5csZjBmo1KhrtWut1q293r2h0KGVypVRqFFIpEharVpBoEExmDEYjBjR6NGAwIBjsWOs1qx1unW12rWHw4eRyJGSpRPUAAAEFElEQVR4nMVb2ZaqQAy0m61VQGQREBAX1P//wwuC0EEc70uSetRzppgsleo0rlYcMHyfhfcNM0xtTn4vyz1O/k2z5UyAcz8mnPx2fio3jPx+Eh0Z+a30qIozH7+dnWQR8vH7TSSqHRu9sSuVqFKDi9+MXSlcPn5vHwhxurPxbxIlRHBzmOid3VG2/JnFxG/eXCFElJtM/N6zTb+o91wD2G/qll9tuQZw2HZ/y58w8Ttp0ZafkGumAWwdTqLj5xqAdt6VnxAV0wDyHtGLn0uA+/JvBejAI4Cbq3rxR0wCeO7UtxOgB4sAGrui52cSACeten5ZsgiAc3eFYGzAQX5anFIW/vjNH8QcDWhlwcBfPzkaYOLnaYCJn2cCTfzC5TiCWPHIH8QME8i6veu/tYAMBeiM/S8kRwEa95FfFBwFmLojf3Bn4A+rkb9+MliAzTD/uQrAX8upAM70/F6iWAvAvkz8iqEArDwa+eWavgCMwyjA7Qhg8EC7SQBaE07vQbQGFLKh3wJ414mfQ4L1BmhPYeQz2Im1AlRb+hmsFyBHAvyjxh8dyPntRisA2ZAnwMprLQAVfQLSE0gAeQf4mgJxSJC9VXoCztT8hq4Aos7IE6B5QJYh7CVaATAsAmAHqgu5Cwr1DhQF+SbIW+sJiG7U/A5IgEzIJQDMQHEit4HABAlFfhKHCWBwASFIQE3ug+1GT4AsqTXQOER6AJBOgtb3sAIXhjWFzTz79netpz6EsVrwHkSXL6mFGqweKBXYWR2VLHaXDSQAyQear8OOLM8L38WgAlWOYkPuvdWRx8/8+oXOjzQFxzL/fOPFgRVYo6xjzf1I8rHwhhoocDQo1bzm7NLZ3IIKjFA0COqMAjoDDiJCXDECYO1BlsG9J/ShSCKsJ+AF7d4BDgEcHwQT8OIZA+3B7wIMJz5PQId6SIKRge9kguGDZlXWY5DbmQYFGFdCfrnAL2S/+clhADC2EbNJC7PtV/AzjDG8W0pA99+u7ZWzxw+Av17m7+pwdYYBQPEhl+UEdCg2swCgLATzMpBfHkCVcArhGDHTCx+nL48gwec4Aehghdd6+QlgABCvhV+vXv4A7kLMzH4+AcoUmGD9egL0dYCZR38+AP61HNxAfgTgir8P8ctvgiCwnOAMM/cLUFIshIzsaxnUNLcScAkBAkC0j9hUy/w4h6EFGNmyJh/JdqJwFfeGyuk2Un8ZVBKYj085UnvKrfjMh3cgvpv/EAPqm0G4kxfoc/gTs5MqxRiCMBuChcSfOIOhRL4V7q6mtFasY3J+uC8oOF4RNabFJNJS8hemkeAy/Uri3Yp4p6EfMIeXJFA2Iv+FwR+Si9CIfjXB8ILKiNdUpHNCC7hFXD04wE443pDRsXO3XD9V7GFniEbgH1ZbOIv6ZHebAAAAAElFTkSuQmCC');}
+    .component-container {
+        display: flex;
+        /* height:auto; */
+
+        padding: 2.5em;
+    }
+
+    .leftAligned {
+        flex-direction: row;
+    }
+
+    .rightAligned {
+        flex-direction: row-reverse;
+    }
+
+    .photo-container {
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+    }
+
+    .photo-container img {
+        width: 100%;
+        padding: auto;
+        margin: auto;
+
+    }
+
+    .content-container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 50%;
+        box-sizing: border-box;
+
+        padding: 0em 5em;
+
+    }
+
+
+
+    .content-container .cmp-teaser__action-container {
+        margin: 2.5rem 0rem 0rem;
+        padding: 1em 0em;
+        text-decoration: none;
+    }
+
+    .cmp-teaser__action-link {
+
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+
+    .content-container .cmp-teaser__pretitle {
+
+        font-family: 'Baloo Tammudu 2', cursive;
+
+    }
+
+    .content-container .cmp-teaser__description {
+        line-height: 1.5;
+        font-family: 'Baloo Tammudu 2', cursive;
+        color: rgba(0, 0, 0, 0.623);
+    }
+
+    .content-container .content-heading,
+    .content-container .cmp-teaser__title {
+        font-family: 'Baloo Tammudu 2', cursive;
+        line-height: 1.2em;
+        margin: 1rem 2.5rem 0rem;
+    }
+
+    .content-container .content-text cmp-teaser__title {
+        margin: 1.5em 2.5em 0em;
+        color: rgba(0, 0, 0, 0.623);
+        font-family: 'Baloo Tammudu 2', cursive;
+        line-height: 1.2em;
+
+    }
+
+    .content-container .cmp-teaser__title {
+        margin: 0;
+    }
+
+
+    .content-text li {
+        margin-bottom: 1em;
+        list-style: none;
+    }
+
+    .content-text li:before {
+        margin-left: -2.5em;
+        font-family: FontAwesome;
+        content: "\f00c";
+        display: inline-block;
+        padding-right: 1em;
+        vertical-align: middle;
+        color: #ff8100;
+        float: left;
+    }
 </style>
-
-<div data-sly-use.teaser="com.adobe.cq.wcm.core.components.models.Teaser"
-     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-     data-sly-use.imageTemplate="image.html"
-     data-sly-use.titleTemplate="title.html"
-     data-sly-use.pretitleTemplate="pretitle.html"
-     data-sly-use.descriptionTemplate="description.html"
-     data-sly-use.actionsTemplate="actions.html"
-     data-sly-test.hasContent="${teaser.imageResource || teaser.title || teaser.description || teaser.actions.size > 0}"
-     class="cmp-teaser${!wcmmode.disabled && teaser.imageResource ? ' cq-dd-image' : ''}">
-    <sly data-sly-call="${imageTemplate.image @ teaser=teaser}"></sly>
-    <div class="cmp-teaser__content">
-    	<sly data-sly-call="${pretitleTemplate.pretitle @ teaser=teaser}"></sly>
-        <sly data-sly-call="${titleTemplate.title @ teaser=teaser}"></sly>
-        <sly data-sly-call="${descriptionTemplate.description @ teaser=teaser}"></sly>
-        <sly data-sly-call="${actionsTemplate.actions @ teaser=teaser}"></sly>
-
+<div data-sly-use.teaser="com.atco.aem.core.rumi.models.components.v1.TextImageModel"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-use.imageTemplate="image.html"
+    data-sly-use.titleTemplate="title.html" data-sly-use.pretitleTemplate="pretitle.html"
+    data-sly-use.descriptionTemplate="description.html" data-sly-use.actionsTemplate="actions.html"
+    data-sly-test.hasContent="${teaser.imageResource || teaser.title || teaser.description || teaser.actions.size > 0}"
+    class="cmp-teaser${!wcmmode.disabled && teaser.imageResource ? ' cq-dd-image' : ''}">
+    <div class="component-container ${properties.imageAlignment}">
+        <div class="photo-container">
+            <picture>
+                <source srcset=${properties.fileReference}>
+                <sly data-sly-call="${imageTemplate.image @ teaser=teaser}"></sly>
+            </picture>
+        </div>
+        <div class="content-container">
+            <span class="content-subtitle">
+                <sly data-sly-call="${pretitleTemplate.pretitle @ teaser=teaser}"></sly>
+            </span>
+            <sly class="content-heading" data-sly-call="${titleTemplate.title @ teaser=teaser}"></sly>
+            <span class="content-text">
+                <sly data-sly-call="${descriptionTemplate.description @ teaser=teaser}"></sly>
+            </span>
+            <sly data-sly-call="${actionsTemplate.actions @ teaser=teaser}"></sly>
+        </div>
     </div>
 </div>
 <sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-teaser'}"></sly>
-

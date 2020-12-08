@@ -1,8 +1,6 @@
 <sly data-sly-template.image="${@ teaser}">
-<div class="cmp-teaser__image">
-   <picture>
-    <source srcset=${properties.fileReference}>
-      <img src=${properties.fileReference} class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image">
-    </picture>
- </div>
+<picture>
+<source  srcset=${properties.fileReference}
+    <div class="cmp-teaser__image" data-sly-test="${teaser.imageResource}" data-sly-resource="${teaser.imageResource}"></div>
+</picture>
 </sly>
