@@ -1,65 +1,66 @@
- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-   <style>
-        .component-container {
-              background-image: url('https://cdn.hipwallpaper.com/i/28/92/hSxnDc.jpg');
-            background-repeat: no-repeat;
-            /* background-size: contain; */
-background-size: cover;
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+<style>
+    .herocta_conatiner .component-container {
 
-            max-width: 100vw;
-            width: 100vw !important;
-            padding-left: 15%;
-            color: white;
-            padding-top: 4em;
-            padding-bottom: 6em;
-        }
+        background-repeat: no-repeat;
+        /* background-size: contain; */
+        background-size: cover;
 
-        .cmp-teaser__title {
-            font-family: 'Baloo Tammudu 2', sans-serif;
-            font-weight: 700;
-            font-size: 3em;
-            margin: 0;
-            padding: 0;
-            /* vertical-align: text-bottom; */
+        max-width: 100vw;
+        width: 100vw !important;
+        padding-left: 15%;
+        color: white;
+        padding-top: 4em;
+        padding-bottom: 6em;
+    }
 
-        }
+    .herocta_conatiner .cmp-teaser__title {
+        font-family: 'Baloo Tammudu 2', sans-serif;
+        font-weight: 700;
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+        /* vertical-align: text-bottom; */
 
-        .content-desc {
-            font-family: 'Baloo Tammudu 2', sans-serif;
-            margin-top: -2em;
-        }
-        .content-container{
-        margin-left:-2em}
+    }
 
-         .cmp-teaser__action-container{
-         margin:2em 0em 0em -2em;
-         padding: 0 2em;
-        }
-        .cmp-teaser__action-container a{
-            border-radius: 10em;
-            border: none;
-            padding: 1em 2em;
-            text-decoration:none;
-        }
-    </style>
+    .herocta_conatiner .content-desc {
+        font-family: 'Baloo Tammudu 2', sans-serif;
+        margin-top: -2em;
+    }
 
-<div style="background-image: url('${properties.fileReference @ context='styleString'}');" data-sly-use.teaser="com.adobe.aem.guides.rumi.core.models.HeroCtaModel"
-     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-     data-sly-use.imageTemplate="image.html"
-     data-sly-use.titleTemplate="title.html"
-     data-sly-use.subtitleTemplate="subtitle.html"
-     data-sly-use.descriptionTemplate="description.html"
-     data-sly-use.actionsTemplate="actions.html"
-     data-sly-test.hasContent="${teaser.imageResource || teaser.title || teaser.description || teaser.actions.size > 0}"
-     class="component-container cmp-teaser${!wcmmode.disabled && teaser.imageResource ? ' cq-dd-image' : ''}">
+    .herocta_conatiner .content-container {
+        margin-left: -2em
+    }
+
+    .herocta_conatiner .cmp-teaser__action-container {
+        margin: 2em 0em 0em -2em;
+        padding: 0 2em;
+    }
+
+    .herocta_conatiner .cmp-teaser__action-container a {
+        border-radius: 10em;
+        border: none;
+        padding: 1em 2em;
+        text-decoration: none;
+    }
+</style>
+<div class="herocta_conatiner">
+<div style="background-image: url('${properties.fileReference @ context='styleString'}');"
+    data-sly-use.teaser="com.adobe.aem.guides.rumi.core.models.HeroCtaModel"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html" data-sly-use.imageTemplate="image.html"
+    data-sly-use.titleTemplate="title.html" data-sly-use.subtitleTemplate="subtitle.html"
+    data-sly-use.descriptionTemplate="description.html" data-sly-use.actionsTemplate="actions.html"
+    data-sly-test.hasContent="${teaser.imageResource || teaser.title || teaser.description || teaser.actions.size > 0}"
+    class="component-container cmp-teaser${!wcmmode.disabled && teaser.imageResource ? ' cq-dd-image' : ''}">
     <div class="cmp-teaser__content content-container">
         <sly data-sly-call="${titleTemplate.title @ teaser=teaser}"></sly>
-       <div class="content-desc" data-sly-call="${subtitleTemplate.subtitle @ teaser=teaser}"></div>
+        <div class="content-desc" data-sly-call="${subtitleTemplate.subtitle @ teaser=teaser}"></div>
         <sly data-sly-call="${descriptionTemplate.description @ teaser=teaser}"></sly>
         <sly data-sly-call="${actionsTemplate.actions @ teaser=teaser}"></sly>
     </div>
 </div>
+</div>
 <sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-teaser'}"></sly>
-
